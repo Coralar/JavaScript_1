@@ -28,10 +28,10 @@
 <script>
   "use strict";
 
- let num = prompt('Введите число');
- let hundreds =  Math.floor((num % 1000)/100);
- let tens = Math.floor((num % 100) /10);
- let one = (num % 10);
+ const num = +prompt('Введите число');
+ const hundreds =  Math.floor(num % 1000 / 100);
+ const tens = Math.floor(num % 100 / 10);
+ const one = num % 10;
  alert(`В числе ${num} количество сотен: ${hundreds}, десятков: ${tens}, едениц: ${one}`);
 </script>
 </body>

@@ -22,9 +22,9 @@
 <script>
   "use strict";
 
-  let cel = prompt("Введите температуру в градусах по Цельсию");
-  let far = (9/5) * cel + 32;
-  alert (`Цельсий ${cel}, Фаренгейт ${far}`)
+  const cel = +prompt("Введите температуру в градусах по Цельсию");
+  const far = (9 / 5) * cel + 32;
+  alert (`Цельсий ${cel}, Фаренгейт ${far.toFixed(1)}`);
 
 </script>
 </body>
