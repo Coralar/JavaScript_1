@@ -4,10 +4,10 @@
 
   /**
    * Выполняет математические операции с аргументами
-   * @param {*} arg1 - Певое число.
-   * @param {*} arg2 - Второе число.
-   * @param {*} operation - Операция.
-   * @returns 
+   * @param {number} arg1 - Певое число.
+   * @param {number} arg2 - Второе число.
+   * @param {string} operation - Операция.
+   * @returns {number} - Результат операции.
    */
   function mathOperation(arg1, arg2, operation) {
     switch (operation) {
@@ -21,9 +21,9 @@
 
  /**
   * Считает сумму переданных аргументов.
-  * @param {*} a - Первое число.
-  * @param {*} b - Второе число.
-  * @returns - Сумма чисел.
+  * @param {number} a - Первое число.
+  * @param {number} b - Второе число.
+  * @returns {number} - Сумма чисел.
   */
   function sum(a, b) {
     return a + b;
@@ -31,25 +31,22 @@
   
   /**
    * Считает разность переданных чисел вычитая из большего числа меньшее.
-   * @param {*} a - Первое чисо.
-   * @param {*} b - Второе число.
-   * @returns - Разность чисел.
+   * @param {number} a - Первое чисо.
+   * @param {number} b - Второе число.
+   * @returns {number} - Разность чисел.
    */
-  function dif(a, b) {
+   function dif(a, b) {
     if (a > b) {
       return a - b;
-    } else if (a < b) {
-      return b - a;
-    } else {
-      return 0;
     }
+    return b - a;
   }
 
   /**
    * Считает произведение переданных чисел.
-   * @param {*} a  - Первое число.
-   * @param {*} b - Второе число.
-   * @returns - Произведение чисел.
+   * @param {number} a  - Первое число.
+   * @param {number} b - Второе число.
+   * @returns {number} - Произведение чисел.
    */
   function mul(a, b) {
     return a * b;
@@ -57,9 +54,9 @@
 
   /**
    * Считает частное переданных чисел
-   * @param {*} a - Первое число.
-   * @param {*} b - Второе число.
-   * @returns  - Частное переданных чисел.
+   * @param {number} a - Первое число.
+   * @param {number} b - Второе число.
+   * @returns {number} - Частное переданных чисел.
    */
   function div(a, b) {
     return a / b;
