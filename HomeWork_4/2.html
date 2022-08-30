@@ -56,11 +56,11 @@
     function PostES5(autor, text, date) {
       this.autor = autor;
       this.text = text;
-      this.date = new Date;
+      this.date = new Date();
     }
     PostES5.prototype.edit = function (text) {
       this.text = text;
-      this.date = new Date;
+      this.date = new Date();
     };
 
     let post1 = new PostES5('Alex', 'alex_texttext');
@@ -73,10 +73,11 @@
       constructor(autor, text) {
         this.autor = autor,
         this.text = text,
-        this.date = new Date;
+        this.date = new Date();
       }
       edit(newTetx) {
         this.text = newTetx;
+        this.date = new Date();
       }
     }
     let post2 = new PostES6('John', 'john_texttext');
@@ -96,25 +97,23 @@
     AttachedPostES5.prototype.makeTextHighlighted = function () {
       this.highlighted = true;
       this.date = new Date();
-    }
+    };
 
-    let attPostES5 = new AttachedPostES5 ('Anna', 'anna_texttext');
+    const attPostES5 = new AttachedPostES5 ('Anna', 'anna_texttext');
     console.log(attPostES5);
     attPostES5.makeTextHighlighted();
     console.log(attPostES5);
 
     //ES6
     class AttachedPostES6 extends PostES6 {
-      constructor (autor, text) {
-      super (autor, text);
-      this.highlighted = false;
-      }
+      highlighted = false;
+      
       makeTextHighlighted () {
         this.highlighted = true;
-        this.date = new Date;
+        this.date = new Date();
       }
     }
-    let attPostES6 = new AttachedPostES6 ('Stephan', 'stephan_texttext');
+    const attPostES6 = new AttachedPostES6 ('Stephan', 'stephan_texttext');
     console.log(attPostES6);
     attPostES6.makeTextHighlighted();
     console.log(attPostES6);

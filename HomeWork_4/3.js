@@ -13,7 +13,7 @@ function getDigitsOfNumber(num) {
     return {
         units: num % 10,
         dozens: Math.floor(num % 100 / 10),
-        hundreds: Math.floor(num / 100)
+        hundreds: Math.floor(num / 100),
     }
 }
 
